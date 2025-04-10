@@ -49,3 +49,6 @@ vim.opt.expandtab = true
 vim.opt.shiftwidth = 4
 vim.opt.tabstop = 4
 vim.opt.fixendofline = false
+
+-- lervag/wiki.vim
+vim.g.wiki_root = "~/notas"
