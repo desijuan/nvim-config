@@ -6,7 +6,8 @@ return { -- Lualine
       icons_enabled = false,
       component_separators = "|",
       section_separators = "",
-      theme = "moonfly",
+      -- theme = "moonfly",
+      theme = "codedark",
     },
   },
 }

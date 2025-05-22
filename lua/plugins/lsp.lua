@@ -92,7 +92,7 @@ return { -- LSP Configuration & Plugins
 
     -- Require the servers
     local lspconfig = require "lspconfig"
-    lspconfig.clangd.setup {}
+    -- lspconfig.clangd.setup {}
     lspconfig.zls.setup {}
     lspconfig.gopls.setup {}
   end,
