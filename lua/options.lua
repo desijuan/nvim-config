@@ -10,13 +10,14 @@ vim.opt.termguicolors = true
 
 -- Make line numbers default
 vim.opt.number = true
-vim.opt.relativenumber = true
+vim.opt.relativenumber = false
 -- Don't show the mode, since it's already in status line
 vim.opt.showmode = false
 -- Enable mouse mode, can be useful for resizing splits for example!
 vim.opt.mouse = "a"
 -- Sync clipboard between OS and Neovim.
 vim.opt.clipboard = "unnamedplus"
+vim.g.clipboard = "wl-copy"
 -- Show which line your cursor is on
 vim.opt.cursorline = true
 
@@ -45,12 +46,19 @@ vim.opt.title = true
 -- Hightlight Trailing Whitespaces
 vim.fn.matchadd("Underlined", [[\s\+$]])
 
-vim.opt.wrap = false
+vim.opt.wrap = true
 vim.opt.expandtab = true
-vim.opt.shiftwidth = 4
-vim.opt.tabstop = 4
+vim.opt.shiftwidth = 2
+vim.opt.tabstop = 2
 vim.opt.fixendofline = false
-vim.opt.textwidth = 120
+vim.opt.textwidth = 100
 
 -- lervag/wiki.vim
 vim.g.wiki_root = "~/notas"
+
+vim.filetype.add({
+  extension = {
+    compact = "rust",
+    nr = "rust",
+  },
+})

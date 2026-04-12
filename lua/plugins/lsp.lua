@@ -95,5 +95,7 @@ return { -- LSP Configuration & Plugins
     -- lspconfig.clangd.setup {}
     lspconfig.zls.setup {}
     lspconfig.gopls.setup {}
+    lspconfig.rust_analyzer.setup {}
+    lspconfig.ts_ls.setup {}
   end,
 }
