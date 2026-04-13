@@ -1,3 +1,0 @@
-return {
-  "elmcast/elm-vim",
-}

@@ -55,10 +55,3 @@ vim.opt.textwidth = 100
 
 -- lervag/wiki.vim
 vim.g.wiki_root = "~/notas"
-
-vim.filetype.add({
-  extension = {
-    compact = "rust",
-    nr = "rust",
-  },
-})
