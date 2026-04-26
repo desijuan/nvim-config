@@ -1,5 +1,5 @@
-local function current_mode()
-  local mode = vim.fn.mode()
+local function mode()
+  local curr_mode = vim.fn.mode()
   local mode_map = {
     n = "N",
     i = "I",
@@ -10,7 +10,7 @@ local function current_mode()
     r = "R",
     t = "T",
   }
-  return mode_map[mode] or mode
+  return mode_map[curr_mode] or curr_mode
 end
 
 local function git()
@@ -28,7 +28,7 @@ local function git()
   if git_info.removed == 0 then removed = "" end
 
   return table.concat({
-    "[ ", -- branch icon
+    " [ ", -- branch icon
     head,
     added, changed, removed,
     "]",
@@ -46,7 +46,7 @@ local function filetype(winid)
 end
 
 local function modified(winid)
-  return get_value("modified", winid) and "[+] " or ""
+  return get_value("modified", winid) and " [+]" or ""
 end
 
 Statusline = {}
@@ -59,13 +59,12 @@ function Statusline.active()
   end
 
   return table.concat {
-    " %f ",
+    " %f",
     modified(winid),
     git(),
     " ",
-    current_mode(),
-    "%=",
-    "%y [%P %l:%c] ",
+    mode(),
+    "%=%y %P %l:%c ",
   }
 end
 
