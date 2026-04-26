@@ -32,7 +32,6 @@ vim.pack.add {
 
 vim.diagnostic.config { virtual_text = true }
 vim.cmd.colorscheme "visual_studio_code"
--- vim.cmd.colorscheme "jb"
 
 require("nvim-autopairs").setup {}
 
@@ -49,7 +48,14 @@ require("conform").setup {
   },
 }
 
-require("nvim-tree").setup {}
+require("nvim-tree").setup {
+  filters = {
+    dotfiles = true,
+  },
+  sort = {
+    sorter = "case_sensitive"
+  },
+}
 
 require("fidget").setup {
   notification = {
