@@ -19,15 +19,15 @@ vim.keymap.set("n", "<C-s>", ":up<CR>")
 vim.keymap.set("i", "<C-s>", "<esc>:up<CR>")
 
 -- Nvim Tree
-local api = require "nvim-tree.api"
-vim.keymap.set("n", "<leader>t", api.tree.toggle, { desc = "NvimTreeToggle" })
+local nvimtree = require("nvim-tree.api")
+vim.keymap.set("n", "<leader>t", nvimtree.tree.toggle, { desc = "NvimTreeToggle" })
 
 -- Telescope
 local telescope = require("telescope.builtin")
-vim.keymap.set("n", "<leader>ff", telescope.find_files)
-vim.keymap.set("n", "<leader>fg", telescope.live_grep)
-vim.keymap.set("n", "<leader><leader>", telescope.buffers)
-vim.keymap.set("n", "<leader>fh", telescope.help_tags)
+vim.keymap.set('n', '<leader>ff', telescope.find_files, { desc = 'Telescope find files' })
+vim.keymap.set('n', '<leader>fg', telescope.live_grep, { desc = 'Telescope live grep' })
+vim.keymap.set('n', '<leader>fb', telescope.buffers, { desc = 'Telescope buffers' })
+vim.keymap.set('n', '<leader>fh', telescope.help_tags, { desc = 'Telescope help tags' })
 
 --  This function gets run when an LSP attaches to a particular buffer.
 --    That is to say, every time a new file is opened that is associated with

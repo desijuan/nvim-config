@@ -20,7 +20,9 @@ vim.pack.add {
   "https://github.com/tpope/vim-fugitive",
   -- Nvim Tree
   "https://github.com/nvim-tree/nvim-tree.lua",
-  -- Telescope + deps
+  -- Lualine
+  'https://github.com/nvim-lualine/lualine.nvim',
+  -- Telescope
   "https://github.com/nvim-lua/plenary.nvim",
   "https://github.com/nvim-telescope/telescope-fzf-native.nvim",
   "https://github.com/nvim-telescope/telescope.nvim",
@@ -39,7 +41,11 @@ require("cursorhold-timeout").setup {
   timeout = 250, -- (milliseconds)
 }
 
-vim.lsp.enable { "lua_ls", "zls", "rust_analyzer", "ts_ls" }
+vim.lsp.enable {
+  "lua_ls", "zls", "rust_analyzer",
+  -- "clangd",
+  "ts_ls",
+}
 
 require("conform").setup {
   format_on_save = {
@@ -55,6 +61,16 @@ require("nvim-tree").setup {
   sort = {
     sorter = "case_sensitive"
   },
+}
+
+require("lualine").setup {
+  options = {
+    icons_enabled = false,
+    component_separators = "|",
+    section_separators = "",
+    disabled_filetypes = { "NvimTree" }
+    -- theme = "codedark",
+  }
 }
 
 require("fidget").setup {
@@ -73,4 +89,4 @@ require "options"
 require "keymaps"
 require "autocommands"
 require "join-operator"
-require "statusline"
+-- require "statusline"
