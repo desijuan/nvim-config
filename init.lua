@@ -59,7 +59,7 @@ require("nvim-tree").setup {
     dotfiles = true,
   },
   sort = {
-    sorter = "case_sensitive"
+    sorter = "case_sensitive",
   },
 }
 
@@ -68,16 +68,16 @@ require("lualine").setup {
     icons_enabled = false,
     component_separators = "|",
     section_separators = "",
-    disabled_filetypes = { "NvimTree" }
-    -- theme = "codedark",
+    disabled_filetypes = { "NvimTree" },
+    theme = "codedark",
   }
 }
 
 require("fidget").setup {
   notification = {
     window = {
-      avoid = { "NvimTree" }
-    }
+      avoid = { "NvimTree" },
+    },
   }
 }
 
