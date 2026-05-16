@@ -14,8 +14,10 @@ vim.pack.add {
   "https://github.com/nickkadutskyi/jb.nvim",
   -- Comment
   "https://github.com/numToStr/Comment.nvim",
-  -- Nvim Autopairs
+  -- Autopairs
   "https://github.com/windwp/nvim-autopairs",
+  -- Gomove
+  "https://github.com/booperlv/nvim-gomove",
   -- Vim Fugitive
   "https://github.com/tpope/vim-fugitive",
   -- Nvim Tree
@@ -38,7 +40,7 @@ vim.cmd.colorscheme "visual_studio_code"
 require("nvim-autopairs").setup {}
 
 require("cursorhold-timeout").setup {
-  timeout = 250, -- (milliseconds)
+  timeout = 250, -- milliseconds
 }
 
 vim.lsp.enable {
@@ -53,6 +55,8 @@ require("conform").setup {
     lsp_format = "fallback",
   },
 }
+
+require("gomove").setup {}
 
 require("nvim-tree").setup {
   filters = {

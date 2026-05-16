@@ -30,8 +30,8 @@ vim.opt.undofile = false
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
 
--- -- colorcolumn
--- vim.opt.colorcolumn = "100"
+-- colorcolumn
+vim.opt.colorcolumn = "120"
 
 -- Keep signcolumn on by default
 vim.opt.signcolumn = "yes"
