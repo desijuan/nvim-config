@@ -36,6 +36,7 @@ vim.pack.add {
 
 vim.diagnostic.config { virtual_text = true }
 vim.cmd.colorscheme "visual_studio_code"
+-- vim.cmd.colorscheme "jb"
 
 require("nvim-autopairs").setup {}
 
@@ -74,6 +75,7 @@ require("lualine").setup {
     section_separators = "",
     disabled_filetypes = { "NvimTree" },
     theme = "codedark",
+    -- theme = "onedark",
   }
 }
 
@@ -93,4 +95,5 @@ require "options"
 require "keymaps"
 require "autocommands"
 require "join-operator"
+require "align-col"
 -- require "statusline"

@@ -46,7 +46,7 @@ vim.opt.title = true
 -- Hightlight Trailing Whitespaces
 vim.fn.matchadd("Underlined", [[\s\+$]])
 
-vim.opt.wrap = true
+vim.opt.wrap = false
 vim.opt.expandtab = true
 vim.opt.shiftwidth = 2
 vim.opt.tabstop = 2
