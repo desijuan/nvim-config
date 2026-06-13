@@ -46,6 +46,7 @@ require("cursorhold-timeout").setup {
 
 vim.lsp.enable {
   "lua_ls", "zls", "rust_analyzer",
+  -- "vala_ls",
   -- "clangd",
   "ts_ls",
 }
@@ -91,6 +92,7 @@ require("which-key").setup {
   icons = { rules = false },
 }
 
+require "treesitter"
 require "options"
 require "keymaps"
 require "autocommands"
