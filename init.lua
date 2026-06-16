@@ -58,6 +58,8 @@ require("conform").setup {
   },
 }
 
+require("tidy").setup {}
+
 require("gomove").setup {}
 
 require("nvim-tree").setup {
